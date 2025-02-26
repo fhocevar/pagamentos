@@ -1,3 +1,57 @@
+# Sistema de Pagamentos - API REST
+
+## Visão Geral
+Este é um sistema de pagamentos desenvolvido como uma API REST, permitindo a integração com sistemas de e-commerce, marketplaces e outros serviços que necessitam processar transações financeiras de forma segura e eficiente.
+
+## Funcionalidades
+- Processamento de pagamentos via cartão de crédito e débito
+- Suporte a boletos bancários
+- Consultas de transações
+- Estorno e cancelamento de pagamentos
+- Webhooks para notificação de eventos de pagamento
+- Relatórios financeiros
+
+## Tecnologias Utilizadas
+- **Linguagem:** Java (Spring Boot)
+- **Banco de Dados:** PostgreSQL
+- **Autenticação:** JWT (JSON Web Token)
+- **Mensageria:** RabbitMQ (opcional para processamento assíncrono)
+- **Documentação da API:** Swagger/OpenAPI
+
+## Como Executar
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-repositorio/sistema-pagamentos.git
+   cd sistema-pagamentos
+   ```
+2. Configure as variáveis de ambiente no arquivo `.env` ou `application.properties`
+3. Execute a aplicação:
+   ```bash
+   mvn spring-boot:run
+   ```
+4. Acesse a documentação da API via Swagger:
+   ```
+   http://localhost:8080/swagger-ui.html
+   ```
+
+## Estrutura da API
+### Endpoints Principais
+- **POST /pagamentos** - Cria um novo pagamento
+- **GET /pagamentos/{id}** - Consulta um pagamento pelo ID
+- **POST /pagamentos/{id}/estorno** - Solicita o estorno de um pagamento
+- **GET /transacoes** - Retorna o histórico de transações
+
+## Segurança
+- A API utiliza autenticação JWT para garantir segurança nos endpoints.
+- Todos os dados sensíveis são armazenados de forma criptografada.
+
+## Contribuição
+Se quiser contribuir com melhorias, faça um fork do repositório, crie uma branch e abra um Pull Request!
+
+## Licença
+Este projeto está licenciado sob a MIT License.
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
